@@ -1,11 +1,17 @@
 package hello.springmvc.basic.request;
 
+<<<<<<< HEAD
 import hello.springmvc.basic.HelloData;
+=======
+>>>>>>> origin/main
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.ModelAttribute;
+=======
+>>>>>>> origin/main
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -117,6 +123,7 @@ public class RequestParamController {
                 paramMap.get("age"));
         return "ok";
     }
+<<<<<<< HEAD
 
     /**
      * @ModelAttribute 사용
@@ -144,4 +151,6 @@ public class RequestParamController {
         return "ok";
     }
 
+=======
+>>>>>>> origin/main
 }
