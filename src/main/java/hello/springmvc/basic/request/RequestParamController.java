@@ -1,20 +1,12 @@
 package hello.springmvc.basic.request;
 
-<<<<<<< HEAD
 import hello.springmvc.basic.HelloData;
-=======
->>>>>>> origin/main
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-<<<<<<< HEAD
-import org.springframework.web.bind.annotation.ModelAttribute;
-=======
->>>>>>> origin/main
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.Map;
@@ -123,7 +115,6 @@ public class RequestParamController {
                 paramMap.get("age"));
         return "ok";
     }
-<<<<<<< HEAD
 
     /**
      * @ModelAttribute 사용
@@ -151,6 +142,19 @@ public class RequestParamController {
         return "ok";
     }
 
-=======
->>>>>>> origin/main
+    /**
+     * @RequestBody
+     * - 메시지 바디 정보를 직접 조회(@RequestParam X, @ModelAttribute X)
+     * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용
+     *
+     * @ResponseBody
+     * - 메시지 바디 정보 직접 반환(view 조회X)
+     * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용
+     */
+    @ResponseBody
+    @PostMapping("/request-body-string-v4")
+    public String requestBodyStringV4(@RequestBody String messageBody) {
+        log.info("messageBody={}", messageBody);
+        return "ok";
+    }
 }
